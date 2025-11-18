@@ -5,12 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Clash Royale — Comprehensive Guide</title>
   <link rel="stylesheet" href="/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script defer src="/js/site.js"></script>
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <h1><a href="/">Clash Royale — Comprehensive Guide</a></h1>
-      <nav>
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <div>
+          <div class="site-title"><a href="/">Clash Royale — Comprehensive Guide</a></div>
+          <div class="small">Complete reference: cards, evolutions, strategy</div>
+        </div>
+      </div>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">☰</button>
+
+      <nav id="site-nav" data-open="false" style="display:flex">
         <a href="/concepts.html">Core Concepts</a>
         <a href="/evolutions.html">Evolutions</a>
         <a href="/cards/index.html">Cards</a>
@@ -24,31 +35,46 @@
 
   <main class="container">
     <section class="hero">
-      <h2>The ultimate, in-depth Clash Royale resource</h2>
-      <p>All topics covered: basic mechanics, every card, evolutions, deck archetypes, advanced tactics, clans, clan wars, tournaments, and more. Use the navigation above to explore.</p>
-      <p class="cta"><a class="btn" href="/cards/index.html">Browse Cards</a> <a class="btn ghost" href="/evolutions.html">Learn about Evolutions</a></p>
+      <div>
+        <h1>Professional, comprehensive guide to Clash Royale</h1>
+        <p>Everything from the basics (elixir, buildings, spells) to advanced strategy (tempo, overcommitment), evolutions/progression, clan systems, and a complete per-card reference. Designed to be readable, searchable, and easy to navigate.</p>
+        <div class="actions">
+          <a class="btn" href="/cards/index.html">Browse Cards</a>
+          <a class="btn ghost" href="/evolutions.html">Learn about Evolutions</a>
+        </div>
+
+        <div class="overview-cards">
+          <div class="card-preview"><h4>Core Concepts</h4><p>Elixir, tempo, cycle, decks, buildings and spells.</p></div>
+          <div class="card-preview"><h4>Strategy</h4><p>Trophy pushing, crown farming, match planning, and trades.</p></div>
+          <div class="card-preview"><h4>Clans & Wars</h4><p>Donations, clan management, and war strategies.</p></div>
+          <div class="card-preview"><h4>Game Modes</h4><p>1v1, 2v2, Draft, Challenges and Tournaments.</p></div>
+        </div>
+      </div>
+
+      <aside class="card-preview">
+        <h4>Quick stats</h4>
+        <p class="card-meta">Pages: cards, evolutions, concepts, strategy, clans, game modes, monetization</p>
+        <div style="margin-top:12px"><span class="badge">Updated</span> <span class="small">Nov 18, 2025</span></div>
+      </aside>
     </section>
 
-    <section class="overview">
-      <h3>Quick links</h3>
-      <ul class="links-grid">
-        <li><a href="/concepts.html">Core Concepts & Mechanics</a></li>
-        <li><a href="/strategy.html">Trophy Pushing & Crown Farming</a></li>
-        <li><a href="/clans.html">Clans, Donations & Wars</a></li>
-        <li><a href="/game-modes.html">Game Modes & Tournaments</a></li>
-        <li><a href="/monetization.html">Monetization & P2W</a></li>
-      </ul>
+    <section class="article">
+      <h2>About this site</h2>
+      <p class="small">This is a static HTML/CSS site with a Node.js generator to produce per-card pages from RoyaleAPI. Run <code>node scripts/generate_cards.js</code> with your ROYALEAPI_TOKEN to regenerate cards. The design emphasizes readability, contrast, and quick navigation.</p>
     </section>
 
-    <section class="note">
-      <h4>About this site</h4>
-      <p>The site is a static HTML/CSS site with a simple Node.js generator to produce per-card pages from RoyaleAPI. Cards are stored under /cards/. To regenerate or add cards see /scripts/generate_cards.js.</p>
+    <section class="article" style="margin-top:18px">
+      <h2>Recent additions</h2>
+      <div class="cards-grid">
+        <div class="card-tile"><h4><a href="/cards/generated/knight.html">Knight</a></h4><div class="card-meta">Common · 3 Elixir</div></div>
+        <div class="card-tile"><h4><a href="/cards/index.html">Cards Directory</a></h4><div class="card-meta">Auto-generated index</div></div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <small>Created for the user <strong>aidanlenahan</strong>. This project was added directly to the main branch as requested.</small>
+      <small>Created for aidanlenahan. Built from content in the repository nbracken/web.</small>
     </div>
   </footer>
 </body>
